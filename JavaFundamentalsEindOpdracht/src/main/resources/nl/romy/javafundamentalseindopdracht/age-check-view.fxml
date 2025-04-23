@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<VBox prefHeight="250.0" prefWidth="500.0" stylesheets="@css/stylesheet.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+      <Label text="Age Check Required">
+         <font>
+            <Font size="26"/>
+         </font>
+         <VBox.margin>
+            <Insets top="20" left="20"/>
+         </VBox.margin>
+      </Label>
+      <Label fx:id="movieLabel" text="Movie: " >
+         <VBox.margin>
+            <Insets top="15" left="20"/>
+         </VBox.margin>
+      </Label>
+      <Label fx:id="dateTimeLabel" text="Date and time: ">
+         <VBox.margin>
+            <Insets top="10" left="20"/>
+         </VBox.margin>
+      </Label>
+      <Label fx:id="numberOfTicketsLabel" text="Number of tickets: " >
+         <VBox.margin>
+            <Insets top="10" left="20"/>
+         </VBox.margin>
+      </Label>
+      <Label fx:id="customerNameLabel" text="Customer name: " >
+         <VBox.margin>
+            <Insets top="10" left="20"/>
+         </VBox.margin>
+      </Label>
+      <CheckBox onAction="#checkBoxClicked" fx:id="confirmIdCheckBox" mnemonicParsing="false" text="I have checked the ID card and confirmed that the customer is at least 16 years old" >
+         <VBox.margin>
+            <Insets top="10" left="20"/>
+         </VBox.margin>
+      </CheckBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets top="15" left="20"/>
+         </VBox.margin>
+         <children>
+            <Button fx:id="confirmPurchaseButton" onAction="#onConfirmPurchaseButtonClick" disable="true" mnemonicParsing="false" text="Confirm purchase" prefHeight="20.0" prefWidth="120.0" styleClass="blueButton" textFill="#FFFFFF">
+               <HBox.margin>
+                  <Insets right="15"/>
+               </HBox.margin>
+            </Button>
+            <Button onAction="#onCancelButtonClick" mnemonicParsing="false" text="Cancel" prefHeight="20.0" prefWidth="120.0" styleClass="greyButton" textFill="#FFFFFF"/>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,30 @@
+
+.root{
+    -fx-background-color: #d8cbcb;
+}
+#HBox{
+    -fx-background-color: #44448c;
+}
+
+.button:hover{
+    -fx-background-color: #b8b0b0;
+}
+.blueButton{
+    -fx-background-color: #397bf3;
+}
+.greyButton{
+    -fx-background-color: #6c6464;
+}
+.redButton{
+    -fx-background-color: #ff1e1e;
+}
+.form{
+    -fx-background-color: #FFFFFF;
+}
+.menuButton{
+    -fx-background-color: #5454aa;
+}
+.list-view{
+    -fx-border-color: #000000FF;
+    -fx-border-width: 2;
+}

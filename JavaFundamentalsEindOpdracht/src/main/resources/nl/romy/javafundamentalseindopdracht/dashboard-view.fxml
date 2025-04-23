@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="layout" prefHeight="400.0" prefWidth="700.0" stylesheets="@css/stylesheet.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <HBox id="HBox" prefHeight="47.0" prefWidth="480.0">
+      <children>
+         <ImageView fitHeight="47.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@img/theather-logo.png" />
+         </ImageView>
+         <Label prefHeight="46.0" prefWidth="347.0" text="Amazing Cinema" textFill="WHITE">
+            <font>
+               <Font size="30.0" />
+            </font>
+         </Label>
+         <Button fx:id="sellTicketsButton" onAction="#onSellTicketsButtonClick" mnemonicParsing="false"  styleClass="menuButton" text="Sell tickets" textFill="#FFFFFF">
+            <HBox.margin>
+               <Insets right="2.0" top="20.0" />
+            </HBox.margin></Button>
+         <Button fx:id="manageShowingsButton" mnemonicParsing="false" onAction="#onManageShowingsButtonClick" styleClass="menuButton" text="Manage showings" textFill="#FFFFFF">
+            <HBox.margin>
+               <Insets right="2.0" top="20.0" />
+            </HBox.margin></Button>
+         <Button onAction="#onViewSalesButtonClick" fx:id="viewSalesHistoryButton" mnemonicParsing="false" styleClass="menuButton" text="View sales history" textFill="#FFFFFF">
+            <HBox.margin>
+               <Insets top="20.0" />
+            </HBox.margin></Button>
+      </children>
+   </HBox>
+      <VBox fx:id="welcomeScreen" prefHeight="200.0" prefWidth="100.0">
+         <children>
+               <Label fx:id="welcomeText">
+                  <font>
+                     <Font size="26.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="20.0" top="15.0" />
+                  </VBox.margin>
+               </Label>
+               <Label fx:id="LoggedInText">
+                  <VBox.margin>
+                     <Insets left="20.0" top="10.0" />
+                  </VBox.margin>
+               </Label>
+               <Label fx:id="CurrentDateTimeText">
+                  <VBox.margin>
+                     <Insets left="20" top="10" />
+                  </VBox.margin>
+               </Label>
+            </children>
+         </VBox>
+</VBox>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="layout" prefHeight="350.0" prefWidth="600.0" stylesheets="@css/stylesheet.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox fx:id="addEditShowingScreen" prefHeight="300.0" prefWidth="100.0">
+        <children>
+            <Label fx:id="addEditTitleText">
+                <font>
+                    <Font size="26.0" />
+                </font>
+                <VBox.margin>
+                    <Insets left="20.0" top="15.0" />
+                </VBox.margin>
+            </Label>
+            <VBox prefHeight="300.0" prefWidth="660.0" styleClass="form">
+                <VBox.margin>
+                    <Insets left="20" right="20" top="10" />
+                </VBox.margin>
+                <children>
+                    <HBox>
+                        <TextField fx:id="addEditShowingsTitleTextField" prefWidth="345.0" promptText="Title">
+                            <HBox.margin>
+                                <Insets left="20" top="20" />
+                            </HBox.margin>
+                        </TextField>
+                    </HBox>
+                    <Label text="Start date/time:">
+                        <VBox.margin>
+                            <Insets left="20" top="10" />
+                        </VBox.margin>
+                    </Label>
+                    <HBox prefHeight="22.0" prefWidth="700.0">
+                        <VBox.margin>
+                            <Insets left="20" top="2.5" />
+                        </VBox.margin>
+                        <children>
+                            <DatePicker fx:id="addEditShowingsStartDatePicker" promptText="Date (DD-MM-YYYY)">
+                                <HBox.margin>
+                                    <Insets right="20" />
+                                </HBox.margin>
+                            </DatePicker>
+                            <TextField fx:id="addEditShowingsStartTimeTextField" promptText="Time (HH:MM)" />
+                        </children>
+                    </HBox>
+                    <Label text="Showing duration:">
+                        <VBox.margin>
+                            <Insets left="20" top="10" />
+                        </VBox.margin>
+                    </Label>
+                    <HBox prefHeight="35.0" prefWidth="700.0">
+                        <VBox.margin>
+                            <Insets left="20" top="2.5" />
+                        </VBox.margin>
+                        <children>
+                            <TextField fx:id="addEditShowingsDurationTextField" prefHeight="30" promptText="Duration (MM)">
+                                <HBox.margin>
+                                    <Insets right="20" />
+                                </HBox.margin>
+                            </TextField>
+                            <CheckBox fx:id="movieIsSixteenPlusCheckBox" mnemonicParsing="false" text="Movie is 16+" />
+                            <Label fx:id="addEditShowingsEndDateAndTimeLabel" />
+                        </children>
+                    </HBox>
+                </children></VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+                <VBox.margin>
+                    <Insets left="20" top="15" />
+                </VBox.margin>
+                <children>
+                    <Button fx:id="addEditShowingButton" mnemonicParsing="false" onAction="#onAddEditShowingButtonClick" prefHeight="20.0" prefWidth="120.0" styleClass="blueButton" textFill="#FFFFFF">
+                        <font>
+                            <Font size="14" />
+                        </font>
+                        <HBox.margin>
+                            <Insets right="15" />
+                        </HBox.margin>
+                    </Button>
+                    <Button mnemonicParsing="false" onAction="#onCancelEditOrAddShowingButtonClick" prefHeight="20" prefWidth="120" styleClass="greyButton" text="Cancel" textFill="#FFFFFF">
+                        <font>
+                            <Font size="14" />
+                        </font>
+                    </Button>
+                </children>
+            </HBox>
+        </children></VBox>
+
+</VBox>

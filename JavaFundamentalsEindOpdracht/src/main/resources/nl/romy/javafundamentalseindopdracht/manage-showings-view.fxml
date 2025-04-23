@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="layout" prefHeight="420.0" prefWidth="600.0" stylesheets="@css/stylesheet.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox fx:id="manageShowingsScreen" prefHeight="360.0" prefWidth="600.0">
+        <children>
+            <Label text="Manage showings">
+                <font>
+                    <Font size="26.0" />
+                </font>
+                <VBox.margin>
+                    <Insets left="25.0" top="15.0" />
+                </VBox.margin></Label>
+            <TableView fx:id="showingsTableView" prefHeight="200" prefWidth="700.0">
+                <columns>
+                    <TableColumn fx:id="startTimeColumn" visible="false">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="startTime" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="125.0" sortable="false" text="Start">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="formattedStartTime" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="125.0" sortable="false" text="End">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="formattedEndTime" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn minWidth="125.0" prefWidth="275.0" sortable="false" text="Title">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="title" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="soldSeatsColumn" prefWidth="120.0" sortable="false" text="Seats left">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="seatsLeft" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+                <VBox.margin>
+                    <Insets left="25.0" right="25.0" />
+                </VBox.margin>
+            </TableView>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+                <children>
+                    <Button mnemonicParsing="false" onAction="#onAddShowingsButtonClick" prefHeight="20.0" prefWidth="120.0" styleClass="blueButton" text="Add showing" textFill="#FFFFFF">
+                        <HBox.margin>
+                            <Insets left="25.0" top="10" />
+                        </HBox.margin>
+                        <font>
+                            <Font size="14" />
+                        </font>
+                    </Button>
+                    <Button fx:id="editShowingButton" disable="true" mnemonicParsing="false" onAction="#onEditShowingsButtonClick" prefHeight="20.0" prefWidth="120.0" styleClass="greyButton" text="Edit showing" textFill="#FFFFFF">
+                        <HBox.margin>
+                            <Insets left="10.0" top="10" />
+                        </HBox.margin>
+                        <font>
+                            <Font size="14" />
+                        </font>
+                    </Button>
+                    <Button fx:id="deleteShowingButton" disable="true" mnemonicParsing="false" onAction="#onDeleteShowingsButtonClick" prefHeight="20.0" prefWidth="120.0" styleClass="redButton" text="Delete showing" textFill="#FFFFFF">
+                        <HBox.margin>
+                            <Insets left="10.0" top="10" />
+                        </HBox.margin>
+                        <font>
+                            <Font size="14" />
+                        </font>
+                    </Button>
+                    <Label fx:id="manageShowingsErrorLabel" textFill="#FF0000">
+                        <font>
+                            <Font size="14" />
+                        </font>
+                        <HBox.margin>
+                            <Insets left="10.0" top="10" />
+                        </HBox.margin>
+                    </Label>
+                </children></HBox>
+         <Button onAction="#onExportShowingsButtonClick" mnemonicParsing="false" minHeight="30.0" prefWidth="120.0" styleClass="greyButton" text="Export Showings" textFill="#FFFFFF">
+             <VBox.margin>
+                 <Insets left="25.0" />
+             </VBox.margin>
+         </Button>
+        </children>
+    </VBox>
+</VBox>

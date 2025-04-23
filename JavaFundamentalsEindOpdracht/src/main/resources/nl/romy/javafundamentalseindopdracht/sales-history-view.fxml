@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox xmlns="http://javafx.com/javafx" stylesheets="@css/stylesheet.css" fx:id="layout"
+      xmlns:fx="http://javafx.com/fxml"
+      prefHeight="400.0" prefWidth="600.0">
+    <Label text="View sales history">
+    <font>
+        <Font size="26.0" />
+    </font>
+    <VBox.margin>
+        <Insets left="20.0" top="15.0" />
+    </VBox.margin>
+    </Label>
+    <TableView fx:id="salesHistoryTableView" prefHeight="250" prefWidth="700.0">
+        <columns>
+            <TableColumn sortable="false" prefWidth="125.0" text="Time of sale">
+                <cellValueFactory>
+                    <PropertyValueFactory property="formattedStartTime" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn sortable="false" prefWidth="125.0" text="Number of tickets">
+                <cellValueFactory>
+                    <PropertyValueFactory property="numberOfTickets" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn sortable="false" minWidth="125.0" prefWidth="125.0" text="Customer">
+                <cellValueFactory>
+                    <PropertyValueFactory property="customerName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn sortable="false"  prefWidth="275.0" text="Showing">
+                <cellValueFactory>
+                    <PropertyValueFactory property="showing" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <VBox.margin>
+            <Insets left="25.0" right="25.0" top="10.0" />
+        </VBox.margin>
+    </TableView>
+</VBox>

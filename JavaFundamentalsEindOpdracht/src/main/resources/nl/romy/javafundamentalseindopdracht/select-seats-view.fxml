@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import java.lang.Integer?>
+<VBox stylesheets="@css/stylesheet.css" fx:id="layout" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text="Sell tickets">
+        <font>
+            <Font size="26.0" />
+        </font>
+        <VBox.margin>
+            <Insets left="25.0" top="15.0" />
+        </VBox.margin></Label>
+    <Label fx:id="selectedShowingLabel" text="Selected showing: ">
+        <font>
+            <Font size="12.0" />
+        </font>
+        <VBox.margin>
+        <Insets left="25.0" />
+        </VBox.margin></Label>
+    <HBox styleClass="form">
+        <VBox.margin>
+            <Insets left="15" right="15"/>
+        </VBox.margin>
+        <VBox>
+         <children>
+            <GridPane fx:id="selectSeatsGridPane">
+                <VBox.margin>
+                    <Insets left="15" top="20"/>
+                </VBox.margin>
+                    <Label alignment="BASELINE_CENTER" text="────────── Viewscreen ───────────" GridPane.rowIndex="0" GridPane.columnIndex="1">
+                        <GridPane.columnSpan>
+                            <Integer fx:constant="MAX_VALUE"/>
+                        </GridPane.columnSpan>
+                    </Label>
+            </GridPane>
+            <TextField fx:id="customerNameTextField" promptText="Customer name" >
+                <VBox.margin>
+                    <Insets top="20" left="15"/>
+                </VBox.margin>
+            </TextField>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+                <VBox.margin>
+                    <Insets top="20" left="15"/>
+                </VBox.margin>
+               <children>
+                  <Button onAction="#onSellButtonClick" fx:id="selectSeatsSellButton" text="Sell tickets" disable="true" styleClass="blueButton" prefHeight="20" prefWidth="120" textFill="#FFFFFF" mnemonicParsing="false">
+                      <HBox.margin>
+                          <Insets right="20"/>
+                      </HBox.margin>
+                  </Button>
+                  <Button onAction="#onCancelButtonClick" fx:id="selectSeatsCancelButton" styleClass="greyButton" prefHeight="20" prefWidth="120" textFill="#FFFFFF" mnemonicParsing="false" text="Cancel" />
+               </children>
+            </HBox>
+         </children></VBox>
+        <VBox>
+            <Label text="Selected seats:"/>
+            <ListView fx:id="selectedSeatsListView" prefHeight="205" prefWidth="150"/>
+            <HBox.margin>
+                <Insets left="25" top="20"/>
+            </HBox.margin>
+        </VBox>
+    </HBox>
+</VBox>
